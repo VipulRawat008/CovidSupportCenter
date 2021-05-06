@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useBodyStyles = makeStyles(
   (theme) => ({
     root: {
-      width: '100vW',
+      width: '100%',
       display: 'flex',
       flexDirection: 'column',
       flex: 1,
@@ -39,10 +39,11 @@ export const useNavStyles = makeStyles(
       alignItems: 'center',
     },
     appBar: {
-      borderTop: '4px solid #f4649f',
+      borderTop: '0px solid #f4649f',
     },
     searchBar: {
       flexGrow: 0.6,
+      marginBottom: '5px',
       [theme.breakpoints.down('xs')]: {
         flexGrow: 1,
         marginLeft: '0.6em',
@@ -125,6 +126,7 @@ export const useQuesListStyles = makeStyles(
       justifyContent: 'space-between',
       alignItems: 'flex-start',
       flexWrap: 'wrap',
+      marginBottom: '2em',
       [theme.breakpoints.down('xs')]: {
         paddingLeft: '0.4em',
         paddingRight: '0.4em',
@@ -190,7 +192,7 @@ export const useRightSidePanelStyles = makeStyles(
 export const useQuesCardStyles = makeStyles(
   (theme) => ({
     root: {
-      borderBottom: '1px solid #dfdfdf',
+      borderBottom: '1.5px solid #dfdfdf',
       display: 'flex',
       padding: '0.5em 0',
       borderRadius: 0,
@@ -216,7 +218,7 @@ export const useQuesCardStyles = makeStyles(
       wordWrap: 'anywhere',
       textDecoration: 'none',
       '&:hover': {
-        filter: 'brightness(200%)',
+        color: 'red',
       },
       transition: 'all 0.4s ease',
     },
@@ -337,6 +339,7 @@ export const useTagsPageStyles = makeStyles(
     },
     titleText: {
       marginBottom: '0.9em',
+      color: 'red',
     },
     filterInput: {
       marginTop: '1.2em',
@@ -356,8 +359,8 @@ export const useTagsPageStyles = makeStyles(
       alignItems: 'flex-start',
       padding: '0.8em',
       paddingBottom: '0.4em',
-      border: '1px solid #d3d3d3',
-      borderRadius: 4,
+      border: '1px solid grey',
+      borderRadius: 2,
     },
     tag: {
       marginBottom: '0.9em',

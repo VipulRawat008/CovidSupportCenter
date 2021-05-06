@@ -4,7 +4,6 @@ import { GET_QUESTIONS } from '../graphql/queries';
 import { useParams, Link as RouterLink } from 'react-router-dom';
 import { useStateContext } from '../context/state';
 import { useAuthContext } from '../context/auth';
-import SortQuesBar from '../components/SortQuesBar';
 import QuesCard from '../components/QuesCard';
 import AuthFormModal from '../components/AuthFormModal';
 import LoadMoreButton from '../components/LoadMoreButton';
@@ -20,7 +19,7 @@ const QuesListPage = ({ tagFilterActive, searchFilterActive }) => {
   const { clearEdit, notify } = useStateContext();
   const { user } = useAuthContext();
   const [quesData, setQuesData] = useState(null);
-  const [sortBy, setSortBy] = useState('HOT');
+  const [sortBy] = useState('NEWEST');
   const [page, setPage] = useState(1);
   const classes = useQuesListStyles();
   const theme = useTheme();
