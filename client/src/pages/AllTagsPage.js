@@ -11,7 +11,7 @@ import { useTagsPageStyles } from '../styles/muiStyles';
 import SearchIcon from '@material-ui/icons/Search';
 
 const AllTagsPage = () => {
-  const { notify } = useStateContext();
+  const notify = useStateContext();
   const { data, loading } = useQuery(GET_ALL_TAGS, {
     onError: (err) => {
       notify(getErrorMsg(err), 'error');
@@ -27,7 +27,7 @@ const AllTagsPage = () => {
         Tags
       </Typography>
       <Typography variant="body1">
-        A tag is a keyword or label that categorizes your question with other,
+        A tag is a keyword or label that categorizes your querry with other,
         similar questions. Using <br />
         the right tags makes it easier for others to find and answer your
         question.

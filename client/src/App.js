@@ -9,11 +9,11 @@ import { Paper } from '@material-ui/core/';
 import { ThemeProvider } from '@material-ui/core/styles';
 
 const App = () => {
-  const { darkMode } = useStateContext();
+  const { theme } = useStateContext();
   const classes = useBodyStyles();
 
   return (
-    <ThemeProvider theme={customTheme(darkMode)}>
+    <ThemeProvider theme={customTheme(theme)}>
       <Paper className={classes.root} elevation={0}>
         <ToastNotification />
         <NavBar />
